@@ -12,7 +12,7 @@ Notifications, live activities, media controls and quick widgets, in one small b
 [![Built with Tauri 2](https://img.shields.io/badge/built%20with-Tauri%202-24c8db)](https://v2.tauri.app)
 [![License: MIT](https://img.shields.io/badge/license-MIT-16a34a)](LICENSE)
 
-<img src="docs/screenshots/demo.gif" alt="Lintel opening from the top of the screen and showing its widget panel" width="820">
+<img src="docs/screenshots/demo.gif" alt="Lintel's island showing status icons, opening into its widget panel, closing, then showing a notification" width="360">
 
 </div>
 
@@ -58,23 +58,84 @@ Clicks pass through everywhere outside the island, so the apps below it keep wor
 
 <table>
   <tr>
-    <td align="center" width="50%">
-      <img src="docs/screenshots/panel.png" alt="The open panel with Clock, Weather, Now playing and Controls widgets"><br>
-      <sub><b>Widget panel</b></sub>
+    <td align="center" width="45%" rowspan="3">
+      <img src="docs/screenshots/panel.png" alt="The open panel with Stocks, a New Year's Day countdown, Clock, Calendar, Weather, BBC News headlines, Quick actions and Controls"><br>
+      <sub><b>Widget panel</b>: stocks, a countdown to New Year's Day, and headlines from BBC's technology RSS feed</sub>
     </td>
-    <td align="center" width="50%">
-      <img src="docs/screenshots/notification.png" alt="A notification sliding out of the island"><br>
-      <sub><b>Notification</b></sub>
+    <td align="center" width="55%">
+      <img src="docs/screenshots/status-icons.png" alt="The closed island with battery, disk, memory and date gauges"><br>
+      <sub><b>Status icons</b> on the closed island</sub>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="docs/screenshots/now-playing.png" alt="Music bars and a track title beside the closed island"><br>
-      <sub><b>Now playing</b></sub>
+      <img src="docs/screenshots/notification.png" alt="A Build passed notification sliding out of the island"><br>
+      <sub><b>Notification</b> from the local API</sub>
     </td>
+  </tr>
+  <tr>
     <td align="center">
-      <img src="docs/screenshots/settings.png" alt="The Settings window with theme and style options"><br>
+      <img src="docs/screenshots/settings.png" alt="The Settings window on the General page, with the appearance preview, styles and themes"><br>
       <sub><b>Settings</b></sub>
+    </td>
+  </tr>
+</table>
+
+### Make it yours
+
+The Picture theme puts your own photos behind the panel and the island, and each widget card can have its own color, text color, opacity or picture. Below: the Notch style with a mountain lake for the panel and a strip of the same ridge for the island, an amber Clock card, a sky-blue Weather card, a red spring picture (apricot and peach blossoms, lanterns) behind the New Year's Day countdown, and News as slides.
+
+<table>
+  <tr>
+    <td align="center" width="45%" rowspan="3">
+      <img src="docs/screenshots/panel-custom.png" alt="The open panel over a mountain lake at dawn, with an amber Clock card, a blue Weather card, a red spring Countdowns card, Now playing and News as slides"><br>
+      <sub><b>Picture theme</b> with custom cards and News as slides</sub>
+    </td>
+    <td align="center" width="55%">
+      <img src="docs/screenshots/island-custom.png" alt="The closed island in the Notch style with a mountain ridge picture behind its status icons"><br>
+      <sub><b>Notch style</b> with an island picture</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/pinned-stock.png" alt="The closed island showing NVDA's price and daily change"><br>
+      <sub><b>A stock pinned</b> to the closed island</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/screenshots/settings-widgets.png" alt="Settings, Widgets page: the panel layout editor with the custom-colored cards"><br>
+      <sub><b>Panel layout editor</b>: drag tiles, set sizes, colors and pictures</sub>
+    </td>
+  </tr>
+</table>
+
+The **Transparent** theme lets the desktop show through, with frosted cards on the panel and a clear pill for the closed island:
+
+<table>
+  <tr>
+    <td align="center" width="45%">
+      <img src="docs/screenshots/transparent-panel.png" alt="The open panel in the Transparent theme, the desktop showing through frosted cards"><br>
+      <sub><b>Transparent</b> panel</sub>
+    </td>
+    <td align="center" width="55%">
+      <img src="docs/screenshots/transparent-island.png" alt="The floating island in the Transparent theme, playing a track with gradient music bars"><br>
+      <sub><b>Transparent</b> island, Dynamic Island style, playing music</sub>
+    </td>
+  </tr>
+</table>
+
+### Music
+
+<table>
+  <tr>
+    <td align="center" width="45%">
+      <img src="docs/screenshots/music.gif" alt="Music bars in a cyan-to-violet gradient bouncing below the island while a track plays"><br>
+      <sub><b>Music bars</b> follow the sound, here below the island</sub>
+    </td>
+    <td align="center" width="55%">
+      <img src="docs/screenshots/music-layouts.png" alt="Four music layouts: white bars inside the notch, gradient bars below the notch, orange bars inside the floating island, and flipped bars below it"><br>
+      <sub><b>Layouts</b>: inside or below, upright or flipped, any two-color gradient, on either style</sub>
     </td>
   </tr>
 </table>
@@ -108,6 +169,8 @@ Requires macOS 12 Monterey or later.
 | Toggle from anywhere | `Ctrl+Shift+Space` (Windows) / `Cmd+Shift+Space` (macOS) |
 | Close | `Esc`, or move the pointer away |
 | Arrange widgets | Drag a card to move it, drag its bottom-right corner to resize |
+| Follow the news | **Settings → Widgets → News**: paste a site or its RSS feed, for example `https://feeds.bbci.co.uk/news/technology/rss.xml` |
+| Count down to a day | **Settings → Widgets → Countdowns**: a name and a date, for example *New Year's Day*, 2027-01-01 |
 | Settings | Tray or menu bar icon → **Settings** |
 | Start at login | On by default; **Settings → General → System** turns it off |
 | Quit | Tray or menu bar icon → **Quit Lintel** (closing Settings only hides it) |
